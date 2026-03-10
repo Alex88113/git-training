@@ -2,3 +2,4 @@
 
 Login feature
 Added login.py with basic auth
+Settings featute (BETTER VERSION)
