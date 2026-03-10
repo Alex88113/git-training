@@ -3,3 +3,4 @@
 Login feature
 Added login.py with basic auth
 Profile feature (NEW VERSION)
+Settings featute (BETTER VERSION)
