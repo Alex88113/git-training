@@ -2,7 +2,7 @@ name: Test Calculator
 
 on:
   push:
-    branches: [ master, developer-calculate ]
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
