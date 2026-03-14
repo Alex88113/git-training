@@ -19,7 +19,7 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements-test.txt
-          pip install -r requirements.txt
+          pip install loguru
           
       - name: Run test
         run: pytest test_calculate/ -v
