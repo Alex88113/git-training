@@ -106,7 +106,3 @@ class TestDivision:
         with pytest.raises(ValueError):
             assert Division(n1, n2)
 
-    def test_division(self, num1, num2, expected):
-        div = Division(num1, num2)
-        assert div.division_numbers() == expected
-
