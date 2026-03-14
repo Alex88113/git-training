@@ -1,5 +1,10 @@
+import os
+import sys
 import pytest
+
 from loguru import logger
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from calculate import (
 Calculate,
@@ -12,7 +17,7 @@ Division
 class TestAdd:
     @pytest.mark.parametrize("num1, num2, expected_result", [
         (10, 200, 210),
-        (23, 54, 77),
+        (203, 54, 257),
         (10, 34, 44)
     ])
 
@@ -84,6 +89,7 @@ class TestDivision:
         (100, 2, 50.0)
     ])
 
+
     def test_division(self, num1, num2, expected):
         div = Division(num1, num2)
         assert div.division_numbers() == expected
@@ -99,3 +105,8 @@ class TestDivision:
     def test_exception_division(self, n1, n2):
         with pytest.raises(ValueError):
             assert Division(n1, n2)
+
+    def test_division(self, num1, num2, expected):
+        div = Division(num1, num2)
+        assert div.division_numbers() == expected
+
