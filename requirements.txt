@@ -2,3 +2,4 @@ httpx
 pydantic
 asyncpg
 loguru
+
