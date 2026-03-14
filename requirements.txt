@@ -1,4 +1,4 @@
 httpx
 pydantic
 asyncpg
-logguru
+loguru
