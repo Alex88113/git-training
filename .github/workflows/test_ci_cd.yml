@@ -20,6 +20,6 @@ jobs:
           pip install --upgrade pip
           pip install -r requirements-test.txt
           pip install -r requirements.txt
-          
+
       - name: Run test
         run: pytest test_calculate/ -v
