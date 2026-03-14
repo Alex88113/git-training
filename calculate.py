@@ -1,6 +1,8 @@
 from typing import Dict
+from loguru import logger
 
 class Calculate:
+    logger.debug("Создание объекта Calculate...")
     def __init__(self, number1: int | float, number2: int | float) -> None:
         if not all(isinstance(num, int | float) for num in (number1, number2)):
             raise ValueError("Одна или обе переменные содержать некорректный тип данных")
@@ -11,6 +13,7 @@ class Calculate:
 
         self.number1 = number1
         self.number2 = number2
+        logger.debug("Объект успешно создан!")
 
     def print_info(self) -> Dict[str, int | float]:
         return {
@@ -23,6 +26,7 @@ class Adding(Calculate):
         super().__init__(number1, number2)
 
     def add_numbers(self) -> float:
+        logger.info('Результат работы метода  {r}',  r=self.number1 + self.number2)
         return self.number1 + self.number2
 
 class Subtraction(Calculate):
@@ -51,7 +55,7 @@ class Division(Calculate):
         except TypeError as error:
             raise TypeError(f"Операция с неверным типом данных")
 
-        return float(self.number1 // self.number2)
+        return float(self.number1 / self.number2)
 
 class StartCalculate:
     def __init__(self) -> None:
