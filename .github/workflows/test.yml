@@ -2,9 +2,9 @@ name: Test Calculator
 
 on:
   push:
-    branches: [ master, main ]
+    branches: [ master, testing-branch]
   pull_request:
-    branches: [ master, main ]
+    branches: [ master, testing-branch ]
 
 jobs:
   test:
